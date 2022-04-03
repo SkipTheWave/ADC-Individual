@@ -39,7 +39,7 @@ public class RegisterResource {
 	public Response registerUser(RegisterData data) {
 		
 		if(data.validRegistration()) {
-	
+			// DISCLAIMER: I profusely apologize for the lack of transactions
 		    Key k = datastore.newKeyFactory().setKind("User").newKey(data.username);
 		    if(datastore.get(k) == null)    {
 		        Entity newUser = Entity.newBuilder(k)

@@ -107,7 +107,14 @@ public class UserManagementResource {
 		    Entity target = datastore.get(targetKey);
 		    if(target == null) {
 		        return Response.status(Status.BAD_REQUEST).entity("No user with that username exists.").build();
-		    } else if(clientToken.username.equals(managementData.targetUsername)
+		    } 
+		    String targetRole = target.getString("ROLE");
+		    
+		    // permissions
+		    if((clientToken.username.equals(managementData.targetUsername)  && targetRole.equals(ROLE_USER))
+		    		|| (clientToken.role.equals(ROLE_BACKOFFICE) && targetRole.equals(ROLE_USER))
+		    		|| (clientToken.role.equals(ROLE_SYSTEM_MANAGER) && targetRole.equals(ROLE_USER))
+		    		|| (clientToken.role.equals(ROLE_SYSTEM_MANAGER) && targetRole.equals(ROLE_BACKOFFICE))
 		    		|| clientToken.role.equals(ROLE_SUPERUSER)) { 			
 		    	datastore.delete(targetKey); 	// this works even if the user doesn't exist, but it's good to check, I think
 		    	return Response.ok("User data removed successfully! Hope everything's in order now.").build();
@@ -179,7 +186,7 @@ public class UserManagementResource {
 		    Key userKey = datastore.newKeyFactory().setKind("User").newKey(clientToken.username);
 		    Entity user = datastore.get(userKey);
 		    if(!pwData.validPassword()) {
-		        return Response.status(Status.BAD_REQUEST).entity("Submission invalid. Check length if confirmation matches.").build();
+		        return Response.status(Status.BAD_REQUEST).entity("Submission invalid. Check length and if confirmation matches.").build();
 		    } else if(!user.getString("password").equals(pwData.oldPassword)) { 			
 		    	return Response.status(Status.FORBIDDEN).entity("Old password is incorrect.").build();
 		    } else {
