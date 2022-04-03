@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<script src="../script.js"></script>  
+	<script>checkLogin()</script>   
+
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link rel="stylesheet" href="../style.css">
+    <title>The warehouse - user removal</title>
+  </head>
+
+  <body>
+    <h1>Change password</h1>
+    <h4>(would probably have been more useful as a "forgot my password")</h4>
+
+    <form>
+	  <label for="old-pw">Old password:</label><br>
+	  <input type="password" id="old-pw" name="old-pw"><br>
+	  <label for="new-pw">New password:</label><br>
+	  <input type="password" id="new-pw" name="new-pw"><br>
+	  <label for="confirm-pw">Confirm new password:</label><br>
+	  <input type="password" id="confirm-pw" name="confirm-pw"><br>
+	  
+	  <button type="button" onclick="changePassword();">Submit</button>
+	</form>
+	
+	<br><br><a href='/loggedin/user.html'>Return to your home page (probably for the best)</a>
+	
+  </body>
+</html>

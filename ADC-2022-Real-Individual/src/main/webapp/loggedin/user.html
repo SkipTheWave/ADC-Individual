@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<script src="../script.js"></script>  
+	<script>checkLogin()</script>    
+
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Welcome back to the warehouse</title>
+  </head>
+
+  <body onload="onLoadUser()">
+    <div id="welcome">
+      <h1>Welcome back!</h1>
+    </div>
+    <h2>Now get to work.</h2>
+
+	<!-- if I had a lot more time, I'd use AJAX more to only show the options that your user role has -->
+
+    <br>
+    <table>
+      <tr>
+        <th colspan="2" style="font-weight:900;">Here are some links:</th>        
+      </tr>
+      <tr>
+        <td><a href='/loggedin/profile.html'>View/edit profile (WIP)</a></td>
+       </tr>
+       <tr>
+        <td><a href='/loggedin/change-pw.html'>Change your password</a></td>
+       </tr>
+       <tr>
+        <td><a style='color:rgb(255, 230, 140)' href='/loggedin/change-states.html'>Activate/deactivate accounts</a></td>
+       </tr>
+      <tr>
+        <td><a style='color:rgb(255, 230, 140)' href='/loggedin/change-roles.html'>Change users' roles</a></td>
+       </tr>
+      <tr>
+        <td><a style='color:rgb(204, 65, 0)' href='/loggedin/remove-users.html'>Remove users</a></td>
+       </tr>
+    </table>
+    
+    <br><a href='/loggedin/logout.html'>Logout</a></td>
+
+    <br><br><br><br><br><br><br><br>
+    <div id="session-info">
+        <button type="button" onclick="showToken()">Show session info</button>
+    </div>
+
+  </body>
+</html>

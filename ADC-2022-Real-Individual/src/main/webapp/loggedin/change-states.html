@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<script src="../script.js"></script>  
+	<script>checkLogin()</script>  
+	
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link rel="stylesheet" href="../style.css">
+    <title>The warehouse - activate/deactivate accounts</title>
+  </head>
+
+  <body>
+    <h1>Account activation/deactivation page</h1>
+    <h3>The on/off switch</h3>
+    
+    <p>Note: normal users can only deactivate themselves (a.k.a. cryopreservation)<br><br><br>
+
+    <form>
+	  <label for="username">Target's username:</label>
+	  <input type="text" id="username" name="username"><br><br>
+	  
+	  <label for="state">Target's state:</label>
+		<select id="state">
+		  <option value="ACTIVE">Active</option>
+		  <option value="INACTIVE">Inactive<option>
+		</select>
+	  
+	  <button type="button" onclick="changeState();">Submit</button>
+	</form>
+	
+	<br><br><br><a href='/loggedin/user.html'>Return to your home page</a>
+	
+  </body>
+</html>

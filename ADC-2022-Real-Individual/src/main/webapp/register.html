@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<script src="/script.js"></script>  
+
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link rel="stylesheet" href="/style.css">
+    <title>The warehouse - register</title>
+  </head>
+
+  <body>
+    <h1>Have a seat. Now.</h1>
+    <h2>I'm not asking anymore.</h2>
+
+    <form>
+	  <label for="username">Username (your unique ID):</label><br>
+	  <input type="text" id="username" name="username"><br><br>
+	  <label for="email">Email address:</label><br>
+	  <input type="text" id="email" name="email"><br><br>
+	  
+	  <label for="pw">Password (must be at least 8 characters long):</label><br>
+	  <input type="password" id="pw" name="password"><br><br>
+	  <label for="pwconfirm">Confirm password:</label><br>
+	  <input type="password" id="pwconfirm" name="password confirmation"><br><br>
+
+	  <label for="name">Your name:</label><br>
+	  <input type="text" id="name" name="name"><br><br>
+	  <label for="nif">NIF: (optional)</label><br>
+	  <input type="text" id="nif" name="nif"><br><br>
+	  <label for="address">Address: (optional)</label><br>
+	  <input type="text" id="address" name="address"><br><br>
+	  
+	  <label for="phoneMobile">Mobile phone number: (optional)</label><br>
+	  <input type="text" id="phoneMobile" name="phoneMobile"><br><br>
+	  <label for="phoneHome">Home phone number: (optional)</label><br>
+	  <input type="text" id="phoneHome" name="phoneHome"><br><br>
+	  
+	  <label for="public">Make your profile public?</label>
+	  <input type="checkbox" id="public" name="public profile"><br><br>
+	  
+	  <button type="button" onclick="finishRegister();">Finish</button>
+	</form>
+	
+	<br><br><a href='/index.html'>Return to start page</a>
+	
+  </body>
+</html>
