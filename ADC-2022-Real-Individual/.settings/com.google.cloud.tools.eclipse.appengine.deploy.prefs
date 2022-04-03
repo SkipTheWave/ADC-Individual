@@ -5,4 +5,4 @@ project.bucket=
 project.id=adc-2022-avaliacao-individual
 project.previousVersion.stop=true
 project.promote=true
-project.version=beta5
+project.version=beta6
